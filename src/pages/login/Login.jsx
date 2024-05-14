@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import './login.scss'
 import { toast } from 'react-toastify'
 import axios from '../../api'
+import login from '../../assets/login.png'
 
 
 const Login = () => {
   let navigate = useNavigate()
   const [username, setUsername] = useState("kminchelle")
-  const [password, setPassword] = useState("0lelplR") 
-  const [loading, setLoading] = useState(false)
+  const [password, setPassword] = useState("0lelplR")
+
 
 
   const handleLogin = e => {
@@ -32,21 +33,30 @@ const Login = () => {
       .finally(() => setLoading(false))
   }
   return (
-    <div className='login'>
+    <section className='login'>
+      <div className="container">
+        <div className="login__container">
+          <div className="login__img">
+            <img src={login} alt="" />
+          </div>
+          <form action="" onSubmit={handleLogin} className='login-form'>
+            <h2>Log in to Exclusive</h2>
+            <p className="login__text" >Enter your details below</p>
+            <div className="input-group">
+              <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Email or Phone Number" className="input__username" />
+            </div>
+            <div className="input__group">
+              <input type="password" className="input__password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+            </div>
+            <button type="submit" className="login" >Log in</button>
+          </form>
 
 
-      <h2>Log in</h2>
+        </div>
 
-      <form action="" onSubmit={handleLogin}>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button disabled={loading}>{loading ? "Loading..." : "Log in"}</button>
-      </form>
 
-      <div className="login__btns">
-        <button onClick={() => navigate("/")}>Go Home</button>
-        <button onClick={() => navigate(-1)}>Go Back</button></div>
-    </div>
+      </div>
+    </section>
   )
 }
 

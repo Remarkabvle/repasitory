@@ -1,0 +1,86 @@
+.footer {
+    margin-top: 30px;
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 80px;
+      margin-bottom: 60px;
+  }
+  
+  .subscribe,.support,.account-links,.quick-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subscribe .email-input {
+    padding: 8px;
+    background-color: inherit;
+    border: 1px solid white;
+    color: white;
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+
+  
+  .account-links ul,
+  .quick-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .account-links li,
+  .quick-links li {
+    margin-bottom: 5px;
+  }
+  
+  .account-links .account-link,
+  .quick-links .quick-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .download-app .app-img {
+    width: 120px;
+    margin-top: 10px;
+  }
+  
+  .footer__text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .account-link,.quick-link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media  (max-width: 768px) {
+    .footer__container {
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+    .subscribe,
+    .support,
+    .account-links,
+    .quick-links,
+    .download-app {
+      text-align: center;
+    }
+    .subscribe .email-input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }

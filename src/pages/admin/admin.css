@@ -1,0 +1,120 @@
+.admin {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.admin__about__title {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  transition: 0.3s;
+}
+.admin__about__text {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 165px;
+  cursor: pointer;
+  color: #897575;
+}
+.admin__about__text:hover {
+  color: #DB4444;
+}
+
+form {
+  width: 50%;
+  align-items: center;
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin__overall {
+  display: flex;
+  gap: 200px;
+}
+
+.titleOfadmin {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #DB4444;
+}
+
+#sub-btn {
+  padding: 20px 35px;
+  background-color: #DB4444;
+  color: #fff;
+  margin-top: 30px;
+  border: none;
+  border-radius: 3px;
+  transition: 0.3;
+  cursor: pointer;
+}
+#sub-btn #sub-btn:hover {
+  background-color: #d93c3c;
+}
+
+.logout {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  background: rgb(255, 84, 84);
+  color: white;
+  border-radius: 7px;
+}
+
+@media (max-width: 900px) {
+  .admin__info {
+    display: none;
+  }
+  .titleOfadmin {
+    text-align: center;
+  }
+  form {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 430px) {
+  form {
+    margin: 0 30px;
+  }
+  input {
+    min-width: 100%;
+  }
+}
+/*# sourceMappingURL=admin.css.map */
